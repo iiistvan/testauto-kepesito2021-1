@@ -16,6 +16,7 @@ driver.get("https://ambitious-sky-0d3acbd03.azurestaticapps.net/k5.html")
 
 # gomb és beviteli mező definíciók
 spin = driver.find_element_by_id('spin')
+init = driver.find_element_by_id('init')
 
 
 def play_button():
@@ -47,6 +48,9 @@ def test_TC1_number_elements():
 def test_TC2_check_bingo():
     check_bingo()
 
+
 # TC3: Új játékot tudunk indítani
 # az init gomb megnyomásával a felület visszatér a kiindulási értékekhez
 # új bingo szelvényt kapunk más számokkal.
+def test_TC3_init():
+    init.click()
