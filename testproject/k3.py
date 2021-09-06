@@ -31,6 +31,7 @@ def data_fill(data):
 # title: abcd1234
 # Nincs validációs hibazüzenet
 def test_TC1_correct_fill():
+    """ teszt korrekt adatokkal"""
     data_fill(testdata[0])
     assert len(error_fields) == 0
 
@@ -39,6 +40,7 @@ def test_TC1_correct_fill():
 # title: teszt233@
 # Only a-z and 0-9 characters allewed.
 def test_TC2_illegagal_char():
+    """ teszt illegális karakterekkel"""
     data_fill(testdata[1])
     time.sleep(1)
     assert span.text == error_msg[1]
@@ -48,6 +50,7 @@ def test_TC2_illegagal_char():
 # title: abcd
 # Title should be at least 8 characters; you entered 4.
 def test_TC3_short_data():
+    """ teszt kevés karakterrel"""
     data_fill(testdata[2])
     time.sleep(1)
     assert error_msg[2] in span.text
