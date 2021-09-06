@@ -44,6 +44,7 @@ def start_stop():
 # Alapból egy random kiválasztott szín jelenik meg az == bal oldalanán.
 # A jobb oldalon csak a [ ] szimbólum látszik. <szín neve> [ ] == [ ]
 def test_TC1_startpage_check():
+    """ applikáció megjelenés ellenőrzése """
     assert randomColorName.text in allcolors.text
     assert testColorName.text == ''
 
@@ -51,6 +52,7 @@ def test_TC1_startpage_check():
 # TC2: El lehet indítani a játékot a start gommbal.
 # Ha elindult a játék akkor a stop gombbal le lehet állítani.
 def test_TC2_start_stop():
+    """ start-stop változást hoz """
     start_stop()
     assert not testColorName.text == ''
 
@@ -60,6 +62,7 @@ def test_TC2_start_stop():
 # a jobb oldal ugyan azt a színt tartalmazza akkor a Correct! felirat jelenik meg.
 # ha akkor amikor eltérő szín van a jobb és bal oldalon akkor az Incorrect! felirat kell megjelenjen.
 def test_TC3_correct_work():
+    """ kiértékelés ellenőrzése """
     for i in range(100):
         start_stop()
         check_color()
