@@ -51,15 +51,17 @@ def test_TC1_starting():
 # a: 2
 # b: 3
 # c: 10
-def test_TC2_correct_data():
-    fill_data(test_data[0])
-    check_data(test_data[0][2])
+# def test_TC2_correct_data():
+    # fill_data(test_data[0])
+    # check_data(test_data[0][2])
+
 
 
 # # TC3: Üres kitöltés
 # a: <üres>
 # b: <üres>
 # c: NaN
-def test_TC3_empty_data():
-    fill_data(test_data[1])
-    check_data(test_data[1][2])
+
+# def test_TC3_empty_data():
+#     fill_data(test_data[1])
+#     check_data(test_data[1][2])
